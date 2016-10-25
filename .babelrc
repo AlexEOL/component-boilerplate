@@ -1,0 +1,11 @@
+{
+  "presets": ["react", "airbnb"],
+  "env": {
+    "production": {
+      "plugins": []
+    },
+    "development": {
+      "plugins": []
+    }
+  }
+}
