@@ -21,9 +21,7 @@ module.exports = {
     modulesDirectories: ["node_modules", "src"]
   },
 
-  entry: {
-    main: [path.normalize(__dirname + '/../src')]
-  },
+  entry: {},
 
   output: {
     path: path.normalize(__dirname + '/../lib'),

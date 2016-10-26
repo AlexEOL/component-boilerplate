@@ -3,6 +3,7 @@
  */
 module.exports = function (config) {
   config.set({
+    basePath: '',
     logLevel: config.LOG_INFO,
     reporters: ['progress'],
     autoWatch: false,
@@ -14,12 +15,16 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     files: [
-      'tests/**/*.js'
+      // webpackFiles,
+      'tests/**/*.js',
+      'tests/**/*.jsx'
     ],
 
     preprocessors: {
-      // 'src/**/*.js': ['webpack', 'sourcemap'],
-      'test/**/*.js': ['webpack', 'sourcemap']
+      'tests/**/*.js': ['webpack', 'sourcemap'],
+      'tests/**/*.jsx': ['webpack', 'sourcemap'],
+      'src/**/*.js': ['webpack', 'sourcemap'],
+      'src/**/*.jsx': ['webpack', 'sourcemap']
     },
 
     webpack: require('./webpack.config'),

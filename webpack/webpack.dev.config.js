@@ -2,6 +2,7 @@
  * Created by AlexEOL on 25.10.16.
  */
 const merge = require('lodash/merge');
+const path = require('path');
 
 module.exports = function (baseConfig) {
   return merge({}, baseConfig, {
@@ -21,11 +22,11 @@ module.exports = function (baseConfig) {
     },
 
     entry: {
-      main: []
-        .concat([
-          'webpack/hot/only-dev-server',
-          'webpack-dev-server/client?http://localhost:8000',
-        ], baseConfig.entry.main)
+      main: [
+        'webpack/hot/only-dev-server',
+        'webpack-dev-server/client?http://localhost:8000',
+        path.normalize(__dirname + '/../demo')
+      ]
     },
 
     plugins: [require('./helpers/plugins/html'), require('./helpers/plugins/hot')]
