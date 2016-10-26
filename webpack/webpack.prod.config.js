@@ -6,14 +6,17 @@ const path = require('path');
 
 module.exports = function (baseConfig) {
   return merge({}, baseConfig, {
+    output: merge({}, baseConfig.output, {
+      libraryTarget: 'umd',
+      umdNamedDefine: true
+    }),
     entry: {
       main: [
         path.normalize(__dirname + '/../src')
       ]
     },
     plugins: []
-      .concat(require('./helpers/plugins/html'))
       .concat(require('./helpers/plugins/css'))
-      .concat(require('./helpers/plugins/optimaze'))
+      .concat(require('./helpers/plugins/optimize'))
   });
 };
