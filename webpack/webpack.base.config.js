@@ -17,8 +17,8 @@ module.exports = {
 
   resolve: {
     root: path.normalize(__dirname + '/../src'),
-    extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx", ".css", ".scss"],
-    modulesDirectories: ["node_modules", "src"]
+    extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.css', '.scss', '.saas'],
+    modulesDirectories: ['node_modules', 'src']
   },
 
   entry: {},

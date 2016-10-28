@@ -4,7 +4,7 @@
   "description": "boilerplate for react components",
   "main": "lib/index.js",
   "author": "AlexEOL",
-  "license": "TASS corp",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.5.1",
     "babel-core": "^6.18.0",
